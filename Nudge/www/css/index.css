@@ -3,7 +3,7 @@ body {
     background-image: url(../img/Menu_Back.png);
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-position: center; 
+    background-position: center;
 
 
 
@@ -17,14 +17,13 @@ body {
 
 
 #logo{
-    width:70%;    
+    width:70%;
 
 }
 
 
 .button{
-    width:40vh;
-    height:10vh;
+    width:80%;
 
 
 
