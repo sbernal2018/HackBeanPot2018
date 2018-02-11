@@ -1,14 +1,82 @@
 <!DOCTYPE html>
 <html>
+<head>
+    
+    <style>
+      
+      body
+      {
+        font-family: 'Roboto', sans-serif;
+        letter-spacing: 5px;
+        text-align: center;
+        background-image: url("img/EnterDestination_Back.png");
+      }
+      
+      #top
+      {
+        font-size: 130px;
+        font-weight: lighter;
+      }
+      
+      #bottom
+      {
+        line-height: 10px;
+        letter-spacing: 12px;
+        font-size: 130px;
+        color: blue;
+        font-weight: lighter;
+      }
+      
+      input[type=text]
+      {
+        width: 85%;
+        font-size: 130px;
+        font-weight: lighter;
+        padding: 12px 20px;
+        margin: 25px 0;
+        box-sizing: border-box;
+        border: none;
+        border-bottom: 2px solid gray;
+      }
+      
+      button
+      {
+        font-size: 80px;
+        margin: 50px;
+        padding: 5px 25%;
+        background-color: blue; /* Green */
+        border: none;
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+      }
+      
+      #mainmenu
+      {
+        
+      }
+      
+    </style>
+    
+    <script></script>
+    
+  </head>
+
 <body>
-
-<form action="/action_page.php">
-Enter Destination: <input type="text" name="Insert Destination" value="           ">
-<br>
-<input type="submit" value="Submit">
-</form>
-
-<p>Click the "Submit" button and the form-data will be sent to a page on the server called "/action_page.php".</p>
+      
+      <h1 id="top">Where is your</h1>
+      <h1 id="bottom">destination?</h1>
+      
+      <form>
+        <input type="text" id="dest" name="dest">
+        <button type="button" onclick="submit(document.getElementById('dest'))">Enter</button>
+      </form>
+  
+      <img id="mainmenu" src="img/Menu_Button.png">
+      
+  
+  
 
 </body>
 
