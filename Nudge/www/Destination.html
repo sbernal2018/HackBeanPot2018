@@ -1,0 +1,121 @@
+<html>
+
+  <head>
+  
+    <title>Wake Up!</title>
+    
+    <style>
+    
+      body
+      {
+        color: white;
+        text-align: center;
+        font-family: 'Roboto', sans-serif;
+      }
+      
+      #bg
+      {
+        background-image: url("img/Alarm_Back.png");
+        /* Full height */
+        height: 100%;
+    
+        /* Center and scale the image nicely */
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      
+      #top
+      {
+        position: absolute;
+        font-weight: normal;
+        font-size: 70px;
+        letter-spacing: 3px;
+        top: 5%;
+        left: 50%;
+        width: 1000px;
+        margin-left: -500px;
+      }
+      
+      #bottom
+      {
+        position: absolute;
+        font-weight: lighter;
+        font-size: 80px;
+        letter-spacing: 7px;
+        top: 15%;
+        left: 50%;
+        width: 1000px;
+        margin-left: -500px;
+      }
+      
+      #middle
+      {
+        font-size: 150px;
+        position: absolute;
+        font-weight: bold;
+        letter-spacing: 6px;
+        top: 30%;
+        left: 50%;
+        width: 1000px;
+        margin-left: -500px;
+      }
+      
+      #stop
+      {
+        position: absolute;
+        top: 60%;
+        left: 50%;
+        width: 60%;
+        margin-left: -30%;
+      }
+    
+    </style>
+
+  </head>
+
+  <body>
+    
+    <div id="bg"></div>
+    <h1 id="top" class="fade">YOU'VE REACHED</h1>
+    <h1 id="bottom" class="fade">YOUR DESTINATION</h1>
+    <h1 id="middle" class="fade">WAKE UP</h1>
+    
+    <img id="stop" class="fade" src="img/Stop_Button.png" onclick="stopAlarm()"/>
+
+    <audio id="alarm" autoplay loop>
+      
+      <source src="audio/Alarm.mp3">
+      
+    </audio>
+    
+    <script>
+    
+      var a = document.getElementById("alarm");
+      
+      function stopAlarm()
+      {
+        a.pause();
+        fade();
+      }
+      
+      function fade()
+      {
+        var e = document.body;
+        e.style.opacity = 1;
+
+        (function fadeOut()
+        {
+          if ((e.style.opacity -= .1) < 0) {
+            e.style.display = "none";
+          } else {
+            requestAnimationFrame(fadeOut);
+          }
+        })();
+      }
+    
+    </script>
+
+  </body>
+
+</html>
