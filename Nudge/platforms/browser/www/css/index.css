@@ -17,10 +17,29 @@ body {
 
 
 #logo{
-    width:50vh;
-    
+    width:70%;    
+
+}
+
+
+.button{
+    width:40vh;
+    height:10vh;
+
+
+
 
 
 }
 
 
+
+#first{
+    margin-top:10vh;
+
+
+}
+
+#second{
+    margin-top:10vh;
+}
